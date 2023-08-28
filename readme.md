@@ -1,0 +1,1 @@
+This app accesses news about a particular topic and creates an email feed
