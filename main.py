@@ -7,7 +7,7 @@ api_key = "43c6edecbcfa4159a10f99aaedaf054f"
 url = "https://newsapi.org/v2/everything?"\
        f"q={topic}&"\
        "sortBy=publishedAt&"\
-       "apiKey=43c6edecbcfa4159a10f99aaedaf054f&"\
+       f"apiKey={api_key}&"\
        "language=en"
 
 # Make the api request
