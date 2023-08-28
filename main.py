@@ -1,10 +1,14 @@
 import requests
 from mailer import send_email
 
+topic = "tesla"
+
 api_key = "43c6edecbcfa4159a10f99aaedaf054f"
-url = "https://newsapi.org/v2/top-headlines?"\
-       "country=us&category=business&apiKey="\
-       "43c6edecbcfa4159a10f99aaedaf054f"
+url = "https://newsapi.org/v2/everything?"\
+       f"q={topic}&"\
+       "sortBy=publishedAt&"\
+       "apiKey=43c6edecbcfa4159a10f99aaedaf054f&"\
+       "language=en"
 
 # Make the api request
 request = requests.get(url)
@@ -27,7 +31,7 @@ raw_message = output_headlines()
 
 
 message = f"""\
-Subject: Business news headlines
+Subject: Today's news
 
 {raw_message}\n
 
